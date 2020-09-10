@@ -3,12 +3,14 @@ import CharacterCard from './CharacterCard';
 import './App.css';
 
 const word = "Hello";
-unction App() {
-  return (
-  <div>
-  Hello World
-  </div>
-  );
+function App() {
+ return (
+ <div>
+ {
+ Array.from(word).map((c, i) => <CharacterCard value={c} key={i}/>)
  }
- export default App;
- 
+ </div>
+ );
+}
+
+export default App;
